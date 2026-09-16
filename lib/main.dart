@@ -4,6 +4,7 @@ import 'cases/listview/case_listview.dart';
 import 'cases/image/case_image.dart';
 import 'cases/build_method/case_build_method.dart';
 import 'cases/expensive_widgets/case_expensive_widgets.dart';
+import 'cases/debounce/case_debounce.dart';
 
 void main() {
   runApp(const PerformanceLabApp());
@@ -80,7 +81,15 @@ class MainNavigationScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(title: const Text('Case 6: Missing Debounce'), onTap: () {}),
+          ListTile(
+            title: const Text('Case 6: Missing Debounce'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CaseDebounceScreen()),
+              );
+            },
+          ),
           ListTile(title: const Text('Case 7: Animation Jank'), onTap: () {}),
         ],
       ),
