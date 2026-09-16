@@ -104,6 +104,3 @@ To verify these metrics yourself, follow these precise steps:
 4. Open the **Flutter DevTools** link provided in the terminal (e.g., `http://127.0.0.1:9100`).
 5. Navigate to the **Performance** tab, enable "Enhance Tracing", and click **Record** while interacting with the app.
 6. Compare the frame rendering times (aiming for <16ms per frame) between the Before and After tabs.
-
----
-**Crafted with ?? by a Performance-Obsessed Flutter Engineer**
