@@ -6,6 +6,7 @@ import 'cases/build_method/case_build_method.dart';
 import 'cases/expensive_widgets/case_expensive_widgets.dart';
 import 'cases/debounce/case_debounce.dart';
 import 'cases/animation_jank/case_animation_jank.dart';
+import 'measurement_guide.dart';
 
 void main() {
   runApp(const PerformanceLabApp());
@@ -34,70 +35,61 @@ class MainNavigationScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Performance Lab'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.help_outline),
+            tooltip: 'Cara Mengukur',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MeasurementGuideScreen()),
+              );
+            },
+          )
+        ],
       ),
       body: ListView(
         children: [
           ListTile(
             title: const Text('Case 1: Excessive Rebuilds'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseRebuildScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseRebuildScreen()));
             },
           ),
           ListTile(
             title: const Text('Case 2: Expensive ListView'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseListViewScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseListViewScreen()));
             },
           ),
           ListTile(
             title: const Text('Case 3: Unoptimized Images'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseImageScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseImageScreen()));
             },
           ),
           ListTile(
             title: const Text('Case 4: Heavy Build Method'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseBuildMethodScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseBuildMethodScreen()));
             },
           ),
           ListTile(
             title: const Text('Case 5: Expensive Widgets'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseExpensiveWidgetsScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseExpensiveWidgetsScreen()));
             },
           ),
           ListTile(
             title: const Text('Case 6: Missing Debounce'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseDebounceScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseDebounceScreen()));
             },
           ),
           ListTile(
             title: const Text('Case 7: Animation Jank'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CaseAnimationJankScreen()),
-              );
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const CaseAnimationJankScreen()));
             },
           ),
         ],
