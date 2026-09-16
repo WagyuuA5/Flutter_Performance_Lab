@@ -1,4 +1,4 @@
-# Flutter Performance Lab ??
+# Flutter Performance Lab 
 [![Flutter CI](https://github.com/WagyuuA5/Flutter_Performance_Lab/actions/workflows/ci.yml/badge.svg)](https://github.com/WagyuuA5/Flutter_Performance_Lab/actions/workflows/ci.yml)
 
 Repository ini adalah portofolio unjuk kerja (**performance engineering**) dalam ekosistem Flutter. Tujuannya adalah membuktikan kemampuan untuk **MENGUKUR** dan **MEMPERBAIKI** masalah performa menggunakan metrik data nyata lewat Flutter DevTools, alih-alih sekadar asumsi visual ("terasa lebih cepat").
@@ -7,7 +7,7 @@ Setiap kasus pengujian dibuat saling berdampingan (*Before* dan *After*) dalam s
 
 ---
 
-## ?? Hasil Pengukuran Performa (Ringkasan)
+##  Hasil Pengukuran Performa (Ringkasan)
 
 > **Catatan:** Angka di bawah ini adalah hasil pengujian riil menggunakan `flutter run --profile`. Bagian berstatus `[TODO]` masih menunggu tangkapan profil manual dari perangkat penguji.
 
@@ -23,7 +23,7 @@ Setiap kasus pengujian dibuat saling berdampingan (*Before* dan *After*) dalam s
 
 ---
 
-## ?? Daftar Studi Kasus
+## Daftar Studi Kasus
 
 ### [Case 1: Excessive Rebuilds](lib/cases/rebuild/)
 Memperbaiki pemanggilan `setState` di *root level* yang menyebabkan seluruh widget ter-*rebuild*. **Solusi:** Memecah state menggunakan `ValueNotifier` dan `ValueListenableBuilder`.
@@ -48,7 +48,7 @@ Meletakkan layout kompleks mentah di dalam fungsi `builder` pada `AnimatedBuilde
 
 ---
 
-## ?? Cara Reproduksi Pengukuran
+##  Cara Reproduksi Pengukuran
 
 > Jangan pernah memprofil aplikasi dalam **Debug Mode** karena hasilnya tidak mewakili performa produksi (terdapat JIT overhead).
 
@@ -63,7 +63,7 @@ Meletakkan layout kompleks mentah di dalam fungsi `builder` pada `AnimatedBuilde
 
 ---
 
-## ?? Galeri Pembuktian (Screenshots DevTools)
+##  Galeri Pembuktian (Screenshots DevTools)
 
 Berikut adalah bukti tangkapan layar langsung dari DevTools saat pengujian:
 
@@ -80,5 +80,4 @@ Berikut adalah bukti tangkapan layar langsung dari DevTools saat pengujian:
 | Animation | *Belum tersedia* | *Belum tersedia* |
 
 ---
-**Dibuat oleh AI Assistant - Antigravity Agent** 
-*(Di bawah arahan & kurasi WagyuuA5)*
+
