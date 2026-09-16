@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'cases/rebuild/case_rebuild.dart';
 
 void main() {
   runApp(const PerformanceLabApp());
@@ -30,7 +31,15 @@ class MainNavigationScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          ListTile(title: const Text('Case 1: Excessive Rebuilds'), onTap: () {}),
+          ListTile(
+            title: const Text('Case 1: Excessive Rebuilds'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CaseRebuildScreen()),
+              );
+            },
+          ),
           ListTile(title: const Text('Case 2: Expensive ListView'), onTap: () {}),
           ListTile(title: const Text('Case 3: Unoptimized Images'), onTap: () {}),
           ListTile(title: const Text('Case 4: Heavy Build Method'), onTap: () {}),
