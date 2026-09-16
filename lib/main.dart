@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'cases/rebuild/case_rebuild.dart';
 import 'cases/listview/case_listview.dart';
+import 'cases/image/case_image.dart';
 
 void main() {
   runApp(const PerformanceLabApp());
@@ -50,7 +51,15 @@ class MainNavigationScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(title: const Text('Case 3: Unoptimized Images'), onTap: () {}),
+          ListTile(
+            title: const Text('Case 3: Unoptimized Images'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CaseImageScreen()),
+              );
+            },
+          ),
           ListTile(title: const Text('Case 4: Heavy Build Method'), onTap: () {}),
           ListTile(title: const Text('Case 5: Expensive Widgets'), onTap: () {}),
           ListTile(title: const Text('Case 6: Missing Debounce'), onTap: () {}),
